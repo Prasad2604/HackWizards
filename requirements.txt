@@ -1,0 +1,8 @@
+streamlit
+streamlit-chat
+langchain
+sentence-transformers
+openai
+unstructured
+unstructured[local-inference]
+pinecone-client
