@@ -21,13 +21,13 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
 
 if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
 
 
-system_msg_template = SystemMessagePromptTemplate.from_template(template="""Answer the question as truthfully as possible using the provided context, also you have to give answer in the same language in which question was asked to you, 
+system_msg_template = SystemMessagePromptTemplate.from_template(template="""Answer the question as truthfully as possible using the provided context, also you have to give answer in the same language in which question was asked to you, also you need to sympathise if the query is disturbing, in times of emergency provide the contact details of associated officials,
  and if the answer is not contained within the text below, say 'I don't know' or related phrase in the language of the question.""")
 
 
