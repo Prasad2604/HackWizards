@@ -2,10 +2,10 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 import openai
 import streamlit as st
-openai.api_key = "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"
+openai.api_key = "YOUR_API_KEY_HERE"
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-pinecone.init(api_key='59d1646a-e045-4da3-a6ab-5c515b990d29', environment='gcp-starter')
+pinecone.init(api_key='YOUR_API_KEY_HERE', environment='gcp-starter')
 index = pinecone.Index('langchain-chatbot')
 
 def find_match(input):
