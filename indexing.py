@@ -1,6 +1,6 @@
 from langchain.document_loaders import DirectoryLoader
 
-directory = r'C:\Users\hplap\OneDrive\Desktop\data'
+directory = r'Path of your data directory here'
 
 def load_docs(directory):
   loader = DirectoryLoader(directory)
@@ -27,7 +27,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 import pinecone 
 from langchain.vectorstores import Pinecone
 pinecone.init(
-    api_key="59d1646a-e045-4da3-a6ab-5c515b990d29",  # find at app.pinecone.io
+    api_key="YOUR API_KEY_HERE",  # find at app.pinecone.io
     environment="gcp-starter"  # next to api key in console
 )
 index_name = "langchain-chatbot"
